@@ -10,8 +10,8 @@ RUN useradd -ms /bin/bash node
 RUN chown -R node /opt/hubot
 USER node
 
-RUN yo hubot --owner="Kyle Bassett" --name="PolarBot" --description="I Help Arctiq" --adapter=slack --defaults --allow-root
-# RUN yo hubot --owner="Kyle Bassett" --name="PolarBot" --description="I Help Arctiq" --adapter="rocketchat@0.1" --allow-root
+#RUN yo hubot --owner="Kyle Bassett" --name="PolarBot" --description="I Help Arctiq" --adapter=slack --defaults --allow-root
+RUN yo hubot --owner="Kyle Bassett" --name="PolarBot" --description="I Help Arctiq" --adapter="rocketchat@0.1" --allow-root
 
 RUN npm install hubot-slack
 RUN npm install hubot-urban
@@ -25,10 +25,10 @@ RUN npm install hubot-rocketchat@1
 ADD external-scripts.json /opt/hubot/external-scripts.json
 
 # override to set proper hubot slack integration token (see slack integrations)
-ENV HUBOT_SLACK_TOKEN=xxxxxxxxxxxxxxxxxxxx
+#ENV HUBOT_SLACK_TOKEN=xxxxxxxxxxxxxxxxxxxx
 
-CMD ["./bin/hubot", "--adapter", "slack"]
-#CMD ["./bin/hubot", "--adapter", "rocketchat"]
+#CMD ["./bin/hubot", "--adapter", "slack"]
+CMD ["./bin/hubot", "--adapter", "rocketchat"]
 
 
 #ROCKET CHAT OPTIONS
