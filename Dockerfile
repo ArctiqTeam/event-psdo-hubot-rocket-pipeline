@@ -22,6 +22,7 @@ RUN npm install hubot-ttc-alerts
 RUN npm install hubot-devops-reactions
 RUN npm install hubot-victory
 RUN npm install hubot-jenkins
+Run npm install --save hubot-baronbogo
 #RUN npm install hubot-rocketchat@1
 RUN npm install hubot-rocketchat@1.0.3
 
