@@ -12,7 +12,7 @@ USER node
 
 #RUN yo hubot --owner="Kyle Bassett" --name="polarbot" --description="I Help Arctiq" --adapter=slack --defaults --allow-root
 #RUN yo hubot --owner="Kyle Bassett" --name="polarbot" --description="I Help Arctiq" --adapter="rocketchat@0.1" --allow-root
-RUN yo hubot --owner="Kyle Bassett" --name="polarbot" --description="I Help Arctiq" --adapter="rocketchat@0.1" --allow-root
+RUN yo hubot --owner="Kyle Bassett" --name="polarbot" --description="I Help Arctiq" --adapter="rocketchat@0.1.4" --allow-root
 
 RUN npm install hubot-rocketchat@1
 #RUN npm install hubot-slack
