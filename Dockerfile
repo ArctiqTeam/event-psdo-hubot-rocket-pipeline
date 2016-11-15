@@ -11,6 +11,7 @@ RUN chown -R node /opt/hubot
 USER node
 
 #RUN yo hubot --owner="Kyle Bassett" --name="polarbot" --description="I Help Arctiq" --adapter=slack --defaults --allow-root
+#RUN yo hubot --owner="Kyle Bassett" --name="polarbot" --description="I Help Arctiq" --adapter="rocketchat@0.1" --allow-root
 RUN yo hubot --owner="Kyle Bassett" --name="polarbot" --description="I Help Arctiq" --adapter="rocketchat@0.1" --allow-root
 
 RUN npm install hubot-rocketchat@1
@@ -21,7 +22,8 @@ RUN npm install hubot-ttc-alerts
 RUN npm install hubot-devops-reactions
 RUN npm install hubot-victory
 RUN npm install hubot-jenkins
-RUN npm install hubot-rocketchat@1
+#RUN npm install hubot-rocketchat@1
+RUN npm install hubot-rocketchat@0.1.4
 
 ADD external-scripts.json /opt/hubot/external-scripts.json
 
