@@ -28,6 +28,7 @@ ADD external-scripts.json /opt/hubot/external-scripts.json
 # override to set proper hubot slack integration token (see slack integrations)
 #ENV HUBOT_SLACK_TOKEN=xxxxxxxxxxxxxxxxxxxx
 
+
 #CMD ["./bin/hubot", "--adapter", "slack"]
 CMD ["./bin/hubot", "--adapter", "rocketchat"]
 
